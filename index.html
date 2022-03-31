@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Calculator app</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link href="css/main.css" rel="stylesheet" />
+		<script src="js/main.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<div class="header">
+				<h2>calc</h2>
+				<div class="themes">
+					<p>THEME</p>
+					<div id="switch" class="switch">
+						<label class="radio-button">
+							<input id="theme-1" name="toggle-state" type="radio" />
+							<span class="check"></span>
+							<label>1</label>
+						</label>
+						<label class="radio-button">
+							<input id="theme-2" name="toggle-state" type="radio" />
+							<span class="check"></span>
+							<label>2</label>
+						</label>
+						<label class="radio-button">
+							<input id="theme-3" name="toggle-state" type="radio" />
+							<span class="check"></span>
+							<label>3</label>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="result">
+				<div class="current-operation"></div>
+				<div class="current-number"></div>
+			</div>
+			<div class="keys">
+				<button class="key number">7</button>
+				<button class="key number">8</button>
+				<button class="key number">9</button>
+				<button class="key delete">DEL</button>
+				<button class="key number">4</button>
+				<button class="key number">5</button>
+				<button class="key number">6</button>
+				<button class="key operator">+</button>
+				<button class="key number">1</button>
+				<button class="key number">2</button>
+				<button class="key number">3</button>
+				<button class="key operator">-</button>
+				<button class="key number">.</button>
+				<button class="key number">0</button>
+				<button class="key operator">/</button>
+				<button class="key operator">x</button>
+				<button class="key reset span">RESET</button>
+				<button class="key equals span">=</button>
+			</div>
+			<footer class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="https://github.com/lesterdlb">Lester</a>.
+			</footer>
+		</main>
+	</body>
+</html>

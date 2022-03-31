@@ -1,0 +1,19 @@
+.theme-2 {
+	--main-background: hsl(0, 0%, 90%);
+	--keypad-background: hsl(0, 5%, 81%);
+	--result-background: hsl(0, 0%, 93%);
+
+	--option-key-background: hsl(185, 42%, 37%);
+	--option-key-shadow: hsl(185, 58%, 25%);
+
+	--equals-key-background: hsl(25, 98%, 40%);
+	--equals-key-shadow: hsl(25, 99%, 27%);
+
+	--key-background: hsl(45, 7%, 89%);
+	--key-shadow: hsl(35, 11%, 61%);
+
+	--text-primary: hsl(60, 10%, 19%);
+	--text-secondary: hsl(60, 10%, 19%);
+
+	--equals-color: hsl(0, 0%, 100%);
+}
