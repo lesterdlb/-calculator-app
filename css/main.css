@@ -112,6 +112,15 @@ body {
 	cursor: pointer;
 	font-family: 'Spartan', sans-serif;
 	box-shadow: 0 3px var(--key-shadow);
+	transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.key:hover {
+	filter: brightness(120%);
+	transform: scale(1.03);
+}
+.key:active {
+	transform: scale(0.92);
 }
 
 .number,
