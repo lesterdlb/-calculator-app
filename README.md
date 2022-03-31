@@ -26,5 +26,5 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [https://github.com/lesterdlb/calculator-app](https://github.com/lesterdlb/calculator-app)
+-   Live Site URL: [https://lesterdlb.github.io/calculator-app/](https://lesterdlb.github.io/calculator-app/)
