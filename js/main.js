@@ -17,6 +17,7 @@ themesSwitch.addEventListener('click', event => {
 		localStorage.setItem('prefers-color-scheme', event.target.id);
 	}
 });
+
 keys.addEventListener('click', event => {
 	if (event.currentTarget === event.target) return;
 
@@ -77,13 +78,15 @@ const init = () => {
 	const savedtheme = localStorage.getItem('prefers-color-scheme');
 	savedtheme ? changeTheme(savedtheme) : changeTheme('theme-1');
 
-	currentNumberDiv.innerHTML = formatNumber(currentNumber);
-	currentOperationDiv.innerHTML = '';
+	updateCurrentNumber();
+	updateCurrentOperation();
 };
+
 const changeTheme = themeName => {
 	document.documentElement.className = themeName;
 	document.getElementById(themeName).checked = true;
 };
+
 const formatNumber = num => {
 	const pattern = /(\d)(?=(\d{3})+(?!\d))/g;
 
@@ -92,20 +95,24 @@ const formatNumber = num => {
 	let rightSide = array[1] ? array[1] : '';
 	let leftSide = array[0].replace(pattern, '$1,');
 
-	return leftSide + (num.includes('.') ? '.' + rightSide : '');
+	return `${leftSide}` + (num.includes('.') ? `.${rightSide}` : '');
 };
+
 const updateCurrentNumber = () => (currentNumberDiv.innerHTML = formatNumber(currentNumber));
+
 const updateCurrentOperation = value => {
 	currentOperationDiv.innerHTML = value
-		? formatNumber(previousNumber) + ' ' + operand + ' ' + formatNumber(value) + ' ='
-		: formatNumber(previousNumber) + ' ' + operand;
+		? `${formatNumber(previousNumber)} ${operand} ${formatNumber(value)} =`
+		: `${formatNumber(previousNumber)} ${operand}`;
 };
+
 const performOperation = () => {
 	currentNumber = operations[operand](
 		parseFloat(previousNumber),
 		parseFloat(currentNumber)
 	).toString();
 };
+
 const appendNumber = number => {
 	if (number === '.' && currentNumber.includes('.')) return;
 

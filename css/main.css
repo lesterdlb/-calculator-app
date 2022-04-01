@@ -82,11 +82,16 @@ body {
 
 .result {
 	text-align: end;
-	padding: 1.5rem;
+	padding: 25px;
 	font-size: 32px;
 	background: var(--result-background);
 	color: var(--text-secondary);
 	border-radius: 0.5rem;
+	max-width: 455px;
+}
+
+.current-number {
+	overflow-x: auto;
 }
 
 .current-operation {
@@ -98,9 +103,10 @@ body {
 	background: var(--keypad-background);
 	display: grid;
 	grid-template-columns: repeat(4, 90px);
-	grid-gap: 1rem 1rem;
-	padding: 1.5rem;
+	grid-gap: 15px;
+	padding: 25px;
 	border-radius: 0.5rem;
+	max-width: 455px;
 }
 
 .key {
